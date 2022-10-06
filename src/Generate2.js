@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import "./Generate.css"
 function Generate() {
   const [twistNo, setTwistNo] = useState(0)
+
+  
   const twisters = [
     {
       content:"Black background, brown background"
@@ -25,7 +27,7 @@ function Generate() {
       content:""
     },  
   ]
-  const max = 5;
+  const max = twisters?.length;
   const min = 1;
   const handleClick = async () => {
    
@@ -33,7 +35,6 @@ function Generate() {
     setTwistNo(rand)
 
   }
-console.log(twistNo)
 
   return (
       <div>
